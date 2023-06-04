@@ -3,9 +3,12 @@ import { styled } from "styled-components";
 export const SectionBooks = styled.section`
     display: flex;
     align-items:center;
-    justify-content: center;
+    flex-direction: ${({$flexColumn}) => $flexColumn ? 'column' : 'row'};
     
     max-width: 100%;
     min-height: 90vh;
-    background-color: ${({background}) => background};
+    padding-inline: 20px;
+    background: ${({background}) => `url(${background})`};
+    background-attachment: fixed;
+    background-size: cover;
 `

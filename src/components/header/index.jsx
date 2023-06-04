@@ -1,16 +1,15 @@
-import { useContext } from "react"
-import { IconTogglerTheme } from "./icon-toggler-theme"
+import { Link } from "react-router-dom"
 import { NavBar } from "./navbar"
 import { SectionHeader } from "./styles"
-import { ThemeContext } from "../../context/theme-context"
 
 export const Header = () => {
-    const {theme}  = useContext(ThemeContext)
 
-    return (
-        <SectionHeader background={theme.background}>
-            <IconTogglerTheme />
-            <NavBar />
-        </SectionHeader>
-    )
+  return (
+    <SectionHeader>
+      <Link to={'/'}>
+        <h1>Duds</h1>
+      </Link>
+      <NavBar />
+    </SectionHeader>
+  )
 }

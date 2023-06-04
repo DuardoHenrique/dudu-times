@@ -1,11 +1,26 @@
+import { Link } from "react-router-dom"
 import { Ul, Li } from "./styles"
 
 export const NavBar = () => {
-    return (
-        <Ul>
-            <Li>test1</Li>
-            <Li>test2</Li>
-            <Li>test3</Li>
-        </Ul>
-    )
+  return (
+    <Ul>
+
+      <Li>
+        <Link to={'/'}>Home</Link>
+      </Li>
+
+      <Li>
+        <Link to={'/books'}>Books</Link>
+      </Li>
+
+      <Li>
+        <Link>Nav2</Link>
+      </Li>
+
+      <Li>
+        <Link>Nav3</Link>
+      </Li>
+      
+    </Ul>
+  )
 }

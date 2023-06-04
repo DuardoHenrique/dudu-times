@@ -1,15 +1,12 @@
 import { Container } from "../../components/book-review/container"
 import { SectionBooks } from "../../components/book-review/section"
-import backgroundWriting from "../../assets/background-writing.jpg"
-import { useContext } from "react"
-import { ThemeContext } from "../../context/theme-context"
 
+import writing  from '../../assets/background-writing.jpg'
 
 export const Books = () => {
-    const {theme} = useContext(ThemeContext)
-
+   
     return (
-        <SectionBooks background={theme.background} >
+        <SectionBooks background={writing} >
             <Container />
         </SectionBooks>
     )
