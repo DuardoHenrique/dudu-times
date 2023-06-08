@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import { Error } from "../../error"
 
 import { getBooks } from "../../../services/books"
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { DivLink, DivDetails } from './styles'
-import { A, Card, DivFlex, DivImg, H2, H3, I, ImgBook, P, RankBook, Span, Title } from "../container/styles"
+import { A, Card, DivFlex, DivImg, H2, H3, I, ImgBook, P, RankBook, Span, Title } from "../card/styles"
 
 
 export const BookDetails = () => {
@@ -15,7 +14,7 @@ export const BookDetails = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const json = await getBooks().catch(<Error />)
+      const json = await getBooks()
       const books = await json.results.books
       setBooksList(books)
     }
@@ -24,19 +23,17 @@ export const BookDetails = () => {
 
   return (
     <>
-      <Link to={'/books'} style={{ alignSelf: 'start', marginBottom: '20px', marginLeft: '50px' }}>
-        <DivLink>
-          Voltar
-        </DivLink>
-      </Link>
-
-
+        <Link to={'/books'} style={{ alignSelf: 'start', marginBottom: '20px', marginLeft: '50px' }}>
+          <DivLink>
+            Voltar
+          </DivLink>
+        </Link>
 
       {!booksList && <H2 $colorWhite>Buscando Livro</H2>}
 
       {booksList &&
 
-        <Card $opacityNone>
+        <Card >
           <RankBook>{`${booksList[id].rank}°`}</RankBook>
 
           <DivFlex   >
@@ -64,7 +61,7 @@ export const BookDetails = () => {
               <P>{booksList[id].description}</P>
             </div>
 
-            <H2>Lojas:</H2>
+            <H2>Compra:</H2>
             <div style={{ marginBottom: '10px', marginTop: '10px' }}>
               <A href={booksList[id].buy_links[0].url} target="_blank" rel="noreferrer">
                 {booksList[id].buy_links[0].name}
