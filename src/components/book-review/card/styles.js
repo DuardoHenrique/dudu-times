@@ -98,7 +98,7 @@ export const Card = styled.div`
   border-radius: 10px;
 
   &:hover {
-      transform: ${({scale}) => scale ? 'scale(1.03)' : 'none'};
+      transform: ${({$scale}) => $scale ? 'scale(1.03)' : 'none'};
   }
 
   @media(max-width: 840px) {

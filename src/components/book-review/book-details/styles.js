@@ -1,6 +1,7 @@
 import { styled } from "styled-components"
 
 export const DivLink = styled.div`
+  display: flex;
   color: #ECE4DF; 
   padding: 8px;
   border-radius: 20px;

@@ -2,7 +2,7 @@ import { Card, Title, ImgBook, Span, DivFlex, H3, P, DivImg, RankBook, H2 } from
 
 export const CardBooks = ({book}) => {
   return (
-    <Card scale>
+    <Card $scale>
               <RankBook>{`${book.rank}°`}</RankBook>
 
               <DivFlex>
