@@ -23,26 +23,25 @@ export const BookDetails = () => {
 
   return (
     <>
+      {!booksList && <H2>Buscando Livro</H2>}
+
+      {booksList && <>
         <Link to={'/books'} style={{ alignSelf: 'start', marginBottom: '20px', marginLeft: '50px' }}>
           <DivLink>
             Voltar
           </DivLink>
         </Link>
 
-      {!booksList && <H2 $colorWhite>Buscando Livro</H2>}
-
-      {booksList &&
-
         <Card >
-          <RankBook>{`${booksList[id].rank}°`}</RankBook>
+          <RankBook>{`${booksList[id - 1].rank}°`}</RankBook>
 
           <DivFlex   >
             <Title>
-              <H2>{booksList[id].title}</H2>
+              <H2>{booksList[id - 1].title}</H2>
             </Title>
 
 
-            {booksList[id].book_image ? <ImgBook src={booksList[id].book_image} alt={booksList[id].title} />
+            {booksList[id - 1].book_image ? <ImgBook src={booksList[id - 1].book_image} alt={booksList[id - 1].title} />
               :
               <DivImg>
                 <P>Imagem não encontrada</P>
@@ -50,41 +49,42 @@ export const BookDetails = () => {
 
 
             <div style={{ marginTop: '10px' }}>
-              <H3>Autor: <Span>{booksList[id].author}</Span></H3>
-              <H3>Editora: <Span>{booksList[id].publisher}</Span></H3>
+              <H3>Autor: <Span>{booksList[id - 1].author}</Span></H3>
+              <H3>Editora: <Span>{booksList[id - 1].publisher}</Span></H3>
             </div>
           </DivFlex>
 
           <DivDetails>
             <div style={{ marginBottom: '30px' }}>
               <H2>Descrição:</H2>
-              <P>{booksList[id].description}</P>
+              <P>{booksList[id - 1].description}</P>
             </div>
 
             <H2>Compra:</H2>
             <div style={{ marginBottom: '10px', marginTop: '10px' }}>
-              <A href={booksList[id].buy_links[0].url} target="_blank" rel="noreferrer">
-                {booksList[id].buy_links[0].name}
+              <A href={booksList[id - 1].buy_links[0].url} target="_blank" rel="noreferrer">
+                {booksList[id - 1].buy_links[0].name}
                 <I><FaExternalLinkAlt /></I>
               </A>
             </div>
 
-            <div style={{marginBottom: '10px'}}>
-              <A href={booksList[id].buy_links[1].url} target="_blank" rel="noreferrer" >
-                {booksList[id].buy_links[1].name}
+            <div style={{ marginBottom: '10px' }}>
+              <A href={booksList[id - 1].buy_links[1].url} target="_blank" rel="noreferrer" >
+                {booksList[id - 1].buy_links[1].name}
                 <I><FaExternalLinkAlt /></I>
               </A>
             </div>
 
             <div>
-              <A href={booksList[id].buy_links[2].url} target="_blank" rel="noreferrer" >
-                {booksList[id].buy_links[2].name}
+              <A href={booksList[id - 1].buy_links[2].url} target="_blank" rel="noreferrer" >
+                {booksList[id - 1].buy_links[2].name}
                 <I><FaExternalLinkAlt /></I>
               </A>
             </div>
 
           </DivDetails>
         </Card>
+      </>
       }
 
     </>

@@ -27,4 +27,8 @@ export const GlobalStyles = createGlobalStyle`
     button {
         border: none;
     }
+
+    img {
+      width: 150px;
+    }
 `

@@ -6,19 +6,15 @@ export const NavBar = () => {
     <Ul>
 
       <Li>
-        <Link to={'/'}>Home</Link>
+        <Link to={'/'}>Principal</Link>
       </Li>
 
       <Li>
-        <Link to={'/books'}>Books</Link>
+        <Link to={'/books'}>Livros</Link>
       </Li>
 
       <Li>
-        <Link>Nav2</Link>
-      </Li>
-
-      <Li>
-        <Link>Nav3</Link>
+        <Link>Filmes</Link>
       </Li>
       
     </Ul>

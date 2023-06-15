@@ -6,7 +6,7 @@ export const ContainerBooks = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 40px;
     padding: 20px;
     width: 100%;
     height: 100%;

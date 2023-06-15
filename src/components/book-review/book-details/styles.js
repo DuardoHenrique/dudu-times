@@ -2,14 +2,14 @@ import { styled } from "styled-components"
 
 export const DivLink = styled.div`
   display: flex;
-  color: #ECE4DF; 
+  color: #6c757b; 
   padding: 8px;
   border-radius: 20px;
   font-size: 1.8rem;
   text-decoration: underline;
 
   &:hover {
-    color: #6c757b;
+    color: #E38622;
   }
 `
 export const DivDetails = styled.div`

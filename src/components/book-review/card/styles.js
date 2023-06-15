@@ -2,7 +2,7 @@ import { styled } from "styled-components"
 
 export const H2 = styled.h2`
        font-size: 2.2rem;
-       color: ${({$colorWhite}) => $colorWhite ? 'white' : '#1b1212'};
+       color: #1b1212;
        margin-bottom: 10px;
 
        @media(max-width: 540px) {
@@ -58,7 +58,7 @@ export const RankBook = styled.span`
 `
 
 export const ImgBook = styled.img`
-  max-width: 200px;
+  width: 200px;
   height: 300px;
   border-radius: 10px;
 `
@@ -91,7 +91,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #dbe8f1;
+  background-color: #E8F1F7;
   padding: 10px 20px;
   width: auto;
   min-height: 490px;

@@ -20,11 +20,11 @@ export const Container = () => {
 
   return (
     <ContainerBooks>
-      {!booksList[0] && <H2 $colorWhite >Buscando Livros</H2>}
+      {!booksList[0] && <H2>Buscando Livros</H2>}
 
       {booksList[0] && booksList.map((book, index) => {
         return (
-          <Link to={`/book/${index}`} key={index}>
+          <Link to={`/book/${index+1}`} key={index} style={{display: 'flex', justifyContent: 'center'   }}>
             <CardBooks book={book} />
           </Link>
         )
