@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <SectionHeader>
       <Link to={'/'}>
-        <h1>Duds</h1>
+        <h1>NewYorkDu</h1>
       </Link>
       <NavBar />
     </SectionHeader>

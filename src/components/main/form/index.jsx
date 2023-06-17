@@ -2,7 +2,6 @@ import { forwardRef, useState } from "react"
 import { FormStyled, Input, InputContainer } from "./styles"
 
 export const Form = forwardRef((props, ref) => {
-
   const [inputs, setInputs] = useState({
     search: '',
   })
@@ -24,22 +23,25 @@ export const Form = forwardRef((props, ref) => {
   }
 
   return (
-    <FormStyled onSubmit={submit} ref={ref} >
+    <FormStyled onSubmit={submit}  >
+    
       <InputContainer>
         <Input
-          value={inputs.search}
-          onChange={handleInputChange}
+          ref={ref}
           type="text"
-        />  
-        <Input 
+          value={inputs.search}
+          placeholder={props.placeholder.toUpperCase()}
+          onChange={handleInputChange}
+        />
+        <Input
           type="reset"
           onClick={handleResetInput}
           $displayNone={inputs.search.length > 0 ? false : true}
-
+          value='Limpar'
         />
       </InputContainer>
 
-      <button disabled={inputs.search.length > 0 ? false : true} >Pesquisar</button>
+      <button disabled={inputs.search.length > 0 ? false : true} onClick={props.onclick} >Pesquisar</button>
     </FormStyled>
   )
 })

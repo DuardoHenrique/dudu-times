@@ -14,7 +14,7 @@ export const NavBar = () => {
       </Li>
 
       <Li>
-        <Link>Filmes</Link>
+        <Link to={'/films'}>Filmes</Link>
       </Li>
       
     </Ul>
