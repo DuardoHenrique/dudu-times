@@ -12,8 +12,7 @@
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "styled-components": "^6.0.0-rc.1",
-    "web-vitals": "^2.1.4",
-    "watch": "jest --watch *.js"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
