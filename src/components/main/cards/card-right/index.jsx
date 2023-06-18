@@ -28,11 +28,11 @@ export const CardRight = () => {
 
             <DivImgTitle>
               <Title>Title: {wire.title}</Title>
-              {!wire.multimedia[1].url && <p>Imagem não encontrada</p>}
-              {wire.multimedia[1].url && <img src={wire.multimedia[1].url} alt="" />}
+              {!wire.multimedia && <p>Imagem não encontrada</p>}
+              {wire.multimedia && <img src={wire.multimedia[1].url} alt={wire.title} />}
             </DivImgTitle>
 
-            {wire.multimedia[1].caption && <P><I><TbPointFilled /></I>{wire.multimedia[1].caption}</P>}
+            {wire.multimedia && <P><I><TbPointFilled /></I>{wire.multimedia[1].caption}</P>}
 
             <P><I><TbPointFilled /></I>{wire.abstract}</P>
 
