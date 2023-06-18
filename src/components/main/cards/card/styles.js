@@ -5,7 +5,7 @@ export const AsideCard = styled.aside`
   flex-direction: column;
   justify-content: center;
 
-  box-shadow: 0 0 5px lightblue;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   min-height: 250px;
   width: 100%;
   padding: 10px;
