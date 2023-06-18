@@ -30,7 +30,7 @@ export const Form = forwardRef((props, ref) => {
           ref={ref}
           type="text"
           value={inputs.search}
-          placeholder={props.placeholder.toUpperCase()}
+          placeholder={props.placeholder}
           onChange={handleInputChange}
         />
         <Input

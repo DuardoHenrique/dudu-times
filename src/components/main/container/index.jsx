@@ -22,7 +22,7 @@ export const Container = () => {
         <Form
           ref={formRef}
           onclick={handleClickInput}
-          placeholder={'Procurar'}
+          placeholder={'Ex: Brasil'}
         />
  
 
