@@ -18,7 +18,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-password
+./src/password
 
 npm-debug.log*
 yarn-debug.log*
