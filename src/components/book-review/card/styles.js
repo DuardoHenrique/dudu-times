@@ -91,7 +91,7 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #E8F1F7;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 10px 20px;
   width: auto;
   min-height: 490px;
