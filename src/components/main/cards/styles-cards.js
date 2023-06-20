@@ -2,6 +2,8 @@ import { styled } from "styled-components";
 
 export const A = styled.a`
   width: 95%;
+  display: flex;
+  justify-content: center;
 
   &:hover h2 {
     color: #4A4E50;
@@ -13,7 +15,6 @@ export const P = styled.p`
   font-size: 1rem;
   font-weight: 500;
   color: #6c757b;
-  /* color: #6c757b; */
 `
 
 export const I = styled.i`
@@ -33,12 +34,16 @@ export const DivSource = styled.div`
 `
 
 export const DivImgTitle = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
   margin-bottom: 10px;
+  min-height: 130px;
 
   img {
-    width: 95%;
-    height: 180px;
+    width: 100%;
+    height: 100%;
   }
 `
 

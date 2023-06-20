@@ -6,4 +6,8 @@ export const ConatinerCardCenter = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
 `

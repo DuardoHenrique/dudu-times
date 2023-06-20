@@ -30,9 +30,7 @@ export const CardCenter = ({ subject }) => {
 
           <Card>
 
-            <DivImgTitle>
-              <Title>{article.headline.main}</Title>
-            </DivImgTitle>
+            <Title>{article.headline.main}</Title>
 
             <P><I><TbPointFilled /></I>{article.abstract}</P>
             <P><I><TbPointFilled /></I>{article.lead_paragraph}</P>
