@@ -34,7 +34,6 @@ export const CardCenter = ({ subject }) => {
 
             <P><I><TbPointFilled /></I>{article.abstract}</P>
             <P><I><TbPointFilled /></I>{article.lead_paragraph}</P>
-            <P><I><TbPointFilled /></I>{article.snippet}</P>
 
             <DivSource>
               <div>
