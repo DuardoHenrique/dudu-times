@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { ConatinerCardCenter } from "./styles"
 import { getArticles } from "../../../../services/articles"
 import { Card } from "../card"
-import { A, DivImgTitle, DivSource, I, P, Title } from "../styles-cards"
+import { A, DivSource, I, P, Title } from "../styles-cards"
 import { TbPointFilled } from "react-icons/tb"
 
 export const CardCenter = ({ subject }) => {
@@ -37,8 +37,8 @@ export const CardCenter = ({ subject }) => {
 
             <DivSource>
               <div>
-                <P>Data :{article.pub_date}</P>
-                <P>Assinatura: {article.byline.original}</P>
+                <P>Publicado: {article.pub_date}</P>
+                <P>{article.byline.original}</P>
               </div>
 
               <P>Fonte: {article.source}</P>
