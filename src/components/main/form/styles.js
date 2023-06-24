@@ -16,6 +16,18 @@ export const Input = styled.input`
   }
 `
 
+export const ButtonSearch = styled.button`
+  padding: 5px 7px;
+  border-radius: 8px;
+  background-color: #aabdca;
+  transition: all .5s;
+  pointer-events: ${({disabled}) => disabled ? 'none' : 'all'};
+
+  &:hover {
+    background-color: #6AA1C6;
+  }
+`
+
 export const InputContainer = styled.div`
   padding: 8px;
   border-radius: 5px;

@@ -1,5 +1,5 @@
 import { forwardRef, useState } from "react"
-import { FormStyled, Input, InputContainer } from "./styles"
+import { ButtonSearch, FormStyled, Input, InputContainer } from "./styles"
 
 export const Form = forwardRef((props, ref) => {
   const [inputs, setInputs] = useState({
@@ -41,7 +41,7 @@ export const Form = forwardRef((props, ref) => {
         />
       </InputContainer>
 
-      <button disabled={inputs.search.length > 0 ? false : true} onClick={props.onclick} >Pesquisar</button>
+      <ButtonSearch disabled={inputs.search.length > 0 ? false : true} onClick={props.onclick} >Pesquisar</ButtonSearch>
     </FormStyled>
   )
 })

@@ -51,5 +51,3 @@ export const CardCenter = ({ subject }) => {
     </ConatinerCardCenter>
   )
 }
-
-// popular.url
