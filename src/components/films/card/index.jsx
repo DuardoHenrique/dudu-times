@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { getFilms } from "../../../services/films"
 import { P, Title } from "../../main/cards/styles-cards"
 import { H2 } from "../../book-review/card/styles"
-import { DivCardFilms, DivImgFilms, DivPresentation, DivSourceFilms } from "./styles"
+import { DivCardFilms, DivData, DivImgFilms, DivPresentation, DivSourceFilms } from "./styles"
 
 export const CardFilms = ({ subject }) => {
   const [films, setFilms] = useState('')
@@ -33,7 +33,7 @@ export const CardFilms = ({ subject }) => {
 
             <Title>{film.display_title}</Title>
 
-            <div style={{ display: 'flex' }}>
+            <DivData>
               {film.multimedia ? <img src={film.multimedia.src} alt={film.display_title} />
                 :
                 <DivImgFilms>
@@ -46,7 +46,7 @@ export const CardFilms = ({ subject }) => {
                 <hr></hr>
                 <P>{film.summary_short}</P>
               </DivPresentation>
-            </div>
+            </DivData>
 
             <DivSourceFilms>
               <P>{film.opening_date}</P>
