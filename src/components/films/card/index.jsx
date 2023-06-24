@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
+
 import { getFilms } from "../../../services/films"
 import { P, Title } from "../../main/cards/styles-cards"
+import { H2 } from "../../book-review/card/styles"
+import { DivCardFilms, DivImgFilms, DivPresentation, DivSourceFilms } from "./styles"
 
-export const CardFilms = ({subject}) => {
+export const CardFilms = ({ subject }) => {
   const [films, setFilms] = useState('')
 
   useEffect(() => {
@@ -16,11 +19,11 @@ export const CardFilms = ({subject}) => {
   }, [subject])
 
   return (
-    <div>
+    <>
 
-      {!films && <P>Films não encontrados</P>}
+      {!films && <H2>Buscando filmes</H2>}
       {films && films.map((film, index) => {
-        return <div style={{ marginBottom: '50px', textAlign: 'center' }} key={index} >
+        return <DivCardFilms key={index} >
           <a
             key={index}
             href={film.link.url}
@@ -28,23 +31,31 @@ export const CardFilms = ({subject}) => {
             rel="noreferrer"
           >
 
-            <hr />
             <Title>{film.display_title}</Title>
-            <P>Sinopse: {film.link.suggested_link_text}</P>
-            {film.multimedia ? <img src={film.multimedia.src} alt={film.display_title} />
-              :
-              <P>Imagem não encontrada</P>
-            }
-            <P>Resumo: {film.summary_short}</P>
-            <P>Data: {film.opening_date}</P>
-            <P>Byline: {film.byline}</P>
 
+            <div style={{ display: 'flex' }}>
+              {film.multimedia ? <img src={film.multimedia.src} alt={film.display_title} />
+                :
+                <DivImgFilms>
+                  <P>Imagem não encontrada</P>
+                </DivImgFilms>
+              }
 
+              <DivPresentation>
+                <P>{film.link.suggested_link_text}</P>
+                <hr></hr>
+                <P>{film.summary_short}</P>
+              </DivPresentation>
+            </div>
 
-            <hr />
+            <DivSourceFilms>
+              <P>{film.opening_date}</P>
+              <P>Assinatura: {film.byline}</P>
+            </DivSourceFilms>
+
           </a>
-        </div>
+        </DivCardFilms>
       })}
-    </div>
+    </>
   )
 }

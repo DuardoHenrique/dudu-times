@@ -9,5 +9,5 @@ export const AsideCard = styled.aside`
   width: 100%;
   min-height: 270px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 15px 0;
 `
