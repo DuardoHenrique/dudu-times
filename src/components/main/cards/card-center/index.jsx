@@ -13,7 +13,6 @@ export const CardCenter = ({ subject }) => {
     const fetchData = async () => {
       const data = await getArticles(subject)
       const articles = await data.response.docs
-      console.log('Articles', articles)
       setArticlesList(articles)
     }
     fetchData()

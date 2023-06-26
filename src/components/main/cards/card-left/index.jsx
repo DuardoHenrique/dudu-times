@@ -5,6 +5,7 @@ import { Card } from "../card"
 import { getMostPopular } from "../../../../services/most-popular"
 import { TbPointFilled } from 'react-icons/tb'
 import { A, DivImgTitle, DivSource, I, P, Title } from "../styles-cards"
+import { H2 } from "../../../book-review/card/styles"
 
 export const CardLeft = () => {
   const [mostPopularList, setMostPopular] = useState()
@@ -13,7 +14,6 @@ export const CardLeft = () => {
     const fetchData = async () => {
       const data = await getMostPopular()
       const mostPopular = await data.results
-      console.log('MostPopular', mostPopular);
       setMostPopular(mostPopular)
     }
     fetchData()
@@ -21,7 +21,7 @@ export const CardLeft = () => {
 
   return (
     <ConatinerCardLeft>
-      {!mostPopularList && <h1>Populares não encontrados</h1>}
+      {!mostPopularList && <H2>Populares não encontrados</H2>}
 
       {mostPopularList && mostPopularList.slice(0, 8).map((popular, index) => {
         return <A key={index} href={popular.url} target="_blank" rel="noreferrer" >

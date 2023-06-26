@@ -4,6 +4,7 @@ import { ConatinerCardRight } from "./styles"
 import { getNewsWire } from "../../../../services/news-wire"
 import { Card } from "../card"
 import { TbPointFilled } from 'react-icons/tb'
+import { H2 } from "../../../book-review/card/styles"
 import { A, DivImgTitle, DivSource, P, Title, I, Span } from "../styles-cards"
 
 export const CardRight = () => {
@@ -13,7 +14,6 @@ export const CardRight = () => {
     const fetchData = async () => {
       const data = await getNewsWire()
       const newsWire = await data.results
-      console.log('NewsWire', newsWire)
       setNewWire(newsWire)
     }
     fetchData()
@@ -21,7 +21,7 @@ export const CardRight = () => {
 
   return (
     <ConatinerCardRight>
-      {!newWire && <h1>Populares não encontrados</h1>}
+      {!newWire && <H2>Populares não encontrados</H2>}
       {newWire && newWire.slice(0, 8).map((wire, index) => {
         return <A key={index} href={wire.url} target="_blank" rel="noreferrer" >
           <Card>
