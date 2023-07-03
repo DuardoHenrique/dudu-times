@@ -17,8 +17,7 @@ export const CardCenter = ({ subject }) => {
     }
     fetchData()
   }, [subject])
-
-  console.log(articlesList);
+  
   return (
     <ConatinerCardCenter>
 

@@ -30,12 +30,23 @@ export const CardLeft = () => {
 
             <DivImgTitle>
               <Title>{popular.title}</Title>
-              {popular.media[0] && <img src={popular.media[0]['media-metadata'][1].url} alt={popular.type} />  }
+              {popular.media[0] && <img src={popular.media[0]['media-metadata'][1].url} alt={popular.type} />}
             </DivImgTitle>
 
 
-            <P><I><TbPointFilled /></I>{popular.abstract}</P>
-            {popular.media[0]  && <P><I><TbPointFilled /></I>{popular.media[0].caption}</P>} 
+            {popular.abstract
+              ?
+              <P><I><TbPointFilled /></I>{popular.abstract}</P>
+              :
+              <P><I><TbPointFilled /></I>Resumo não encontrado.</P>
+            }
+
+            {popular.media[0]
+              ?
+              <P><I><TbPointFilled /></I>{popular.media[0].caption}</P>
+              :
+              <P><I><TbPointFilled /></I>Resumo não encontrado.</P>
+            }
 
             <DivSource>
               <div>

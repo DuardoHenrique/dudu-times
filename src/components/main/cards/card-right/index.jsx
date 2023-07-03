@@ -29,12 +29,20 @@ export const CardRight = () => {
             <DivImgTitle>
               <Title>{wire.title}</Title>
               {!wire.multimedia && <P>Imagem não encontrada</P>}
-              {wire.multimedia.length > 0  && <img src={wire.multimedia[1].url} alt={wire.title} />}
+              {wire.multimedia.length > 0 && <img src={wire.multimedia[1].url} alt={wire.title} />}
             </DivImgTitle>
 
-            {wire.abstract && <P><I><TbPointFilled /></I>{wire.abstract}</P>}
+            {wire.abstract
+              ?
+              <P><I><TbPointFilled /></I>{wire.abstract}</P>
+              :
+              <P><I><TbPointFilled /></I>Tópico não encontrado.</P>
+            }
 
-            {wire.multimedia.length > 0 && <P><I><TbPointFilled /></I>{wire.multimedia[1].caption}</P>}
+            {wire.multimedia.length > 0
+              &&
+              <P><I><TbPointFilled /></I>{wire.multimedia[1].caption}</P>
+            }
 
             <DivSource>
               <div>
