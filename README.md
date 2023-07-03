@@ -2,11 +2,13 @@
 
 ## Visualização em Desktop
 
-[<img src="./src/assets/design/new-york-du-animation.gif" />](https://new-york-du.netlify.app/)
+[<img src="./src/assets/design/new-york-du-desktop.gif" />](https://new-york-du.netlify.app/)
 
 ## Visualização em Mobile
 
-[]()
+[<img src="./src/assets/design/new-york-du-mobile.gif" />](https://new-york-du.netlify.app/)
+
+(Pressione CTRL + clique em qualquer gif para abrir o projeto em uma nova guia)
 
 ## Descrição do projeto
 Projeto pessoal, feito tendo em foco o consumo da API do The New York Times. Projeto bastante desafiador para mim pois o projeto lida com vários endpoints diferentes, além da utilização de ferramentas e alguns hooks que nunca tinha usado, como por exemplo o useRef e useParams.
