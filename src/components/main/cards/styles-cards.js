@@ -22,6 +22,12 @@ export const I = styled.i`
   margin-right: 2px;
 `
 
+export const IRedirect = styled.i`
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 30px;
+`
+
 export const Span = styled.span`
   color: #6c757b;
 `

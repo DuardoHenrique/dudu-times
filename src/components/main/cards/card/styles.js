@@ -10,4 +10,8 @@ export const AsideCard = styled.aside`
   min-height: 270px;
   padding: 10px;
   margin: 15px 0;
+
+  img {
+    width: 70%;
+  }
 `

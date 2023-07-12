@@ -1,37 +1,31 @@
-import { useRef, useState } from "react"
+import { useState } from "react"
+import { Navigate } from "react-router-dom"
+import { RxMagnifyingGlass } from "react-icons/rx"
 
 import { ContainerMain } from "./styles"
-import { CardCenter } from "../cards/card-center"
 import { CardLeft } from "../cards/card-left"
 import { CardRight } from "../cards/card-right"
-import { Form } from "../form"
+import { IRedirect } from "../cards/styles-cards"
 
 export const Container = () => {
-  const [subject, setSubject] = useState('')
+  const [direct, setDirect] = useState(false);
 
-  const formRef = useRef(null);
-
-  const handleClickInput = () => {
-    setSubject(formRef.current.value)
+  const handleClick = () => {
+    setDirect(true)
   }
 
   return (
     <>
 
+      {direct ? <Navigate to={'search'} /> : null}
 
-        <Form
-          ref={formRef}
-          onclick={handleClickInput}
-          placeholder={'Ex: Brasil'}
-        />
- 
+
+      <IRedirect onClick={handleClick}><RxMagnifyingGlass /></IRedirect>
 
 
       <ContainerMain >
 
         <CardLeft />
-
-        <CardCenter subject={subject} />
 
         <CardRight />
 

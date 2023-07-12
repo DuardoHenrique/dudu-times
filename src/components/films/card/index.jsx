@@ -13,7 +13,6 @@ export const CardFilms = ({ subject }) => {
       const data = await getFilms(subject)
       const films = await data.results
       setFilms(films)
-      console.log('Films', data.results)
     }
     fetchData()
   }, [subject])

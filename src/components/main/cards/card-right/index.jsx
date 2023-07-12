@@ -22,7 +22,7 @@ export const CardRight = () => {
   return (
     <ConatinerCardRight>
       {!newWire && <H2>Populares não encontrados</H2>}
-      {newWire && newWire.slice(0, 8).map((wire, index) => {
+      {newWire && newWire.map((wire, index) => {
         return <A key={index} href={wire.url} target="_blank" rel="noreferrer" >
           <Card>
 

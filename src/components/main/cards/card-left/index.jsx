@@ -23,7 +23,7 @@ export const CardLeft = () => {
     <ConatinerCardLeft>
       {!mostPopularList && <H2>Populares não encontrados</H2>}
 
-      {mostPopularList && mostPopularList.slice(0, 8).map((popular, index) => {
+      {mostPopularList && mostPopularList.map((popular, index) => {
         return <A key={index} href={popular.url} target="_blank" rel="noreferrer" >
 
           <Card>
