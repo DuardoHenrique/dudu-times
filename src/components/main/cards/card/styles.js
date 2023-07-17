@@ -12,6 +12,6 @@ export const AsideCard = styled.aside`
   margin: 15px 0;
 
   img {
-    width: 70%;
+    max-width: 350px;
   }
 `
